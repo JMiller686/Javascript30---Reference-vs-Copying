@@ -79,6 +79,14 @@
     console.clear();
     console.log(cap3);
     console.log(josh);
+
+    //Only clones one level deep, so changing social in dev also changes social in josh
+    const dev = Object.assign({}, josh, {});
+
+    //If need a total clone find a cloneDeep() function
+
+    //poor mans deep clone, not reccomended
+    const dev2 = JSON.parse(JSON.stringify(josh));
   </script>
 
 </body>
